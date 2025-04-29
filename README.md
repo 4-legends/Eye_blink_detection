@@ -26,23 +26,38 @@ A real-time eye blink detection system that monitors your blink rate and alerts 
 - NumPy
 - SciPy
 - tkinter (for popup notifications)
+- Git LFS (for downloading the facial landmark predictor model)
 
 ## Installation
 
-1. Clone this repository:
+1. Install Git LFS:
+
+```bash
+# For Ubuntu/Debian
+sudo apt-get install git-lfs
+
+# For macOS
+brew install git-lfs
+
+# For Windows (using Chocolatey)
+choco install git-lfs
+```
+
+2. Clone this repository:
 
 ```bash
 git clone https://github.com/yourusername/eye-blink-detection.git
 cd eye-blink-detection
+git lfs pull  # This will download the facial landmark predictor model
 ```
 
-2. Install the required packages:
+3. Install the required packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Download the facial landmark predictor model:
+Note: The facial landmark predictor model (shape_predictor_68_face_landmarks.dat) will be automatically downloaded when you clone the repository using Git LFS. If you don't use Git LFS, you can manually download it:
 
 ```bash
 wget http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
